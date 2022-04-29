@@ -1,15 +1,15 @@
-[![Actions Status](https://github.com/TheLartians/ModernCppStarter/workflows/MacOS/badge.svg)](https://github.com/TheLartians/ModernCppStarter/actions)
-[![Actions Status](https://github.com/TheLartians/ModernCppStarter/workflows/Windows/badge.svg)](https://github.com/TheLartians/ModernCppStarter/actions)
-[![Actions Status](https://github.com/TheLartians/ModernCppStarter/workflows/Ubuntu/badge.svg)](https://github.com/TheLartians/ModernCppStarter/actions)
-[![Actions Status](https://github.com/TheLartians/ModernCppStarter/workflows/Style/badge.svg)](https://github.com/TheLartians/ModernCppStarter/actions)
-[![Actions Status](https://github.com/TheLartians/ModernCppStarter/workflows/Install/badge.svg)](https://github.com/TheLartians/ModernCppStarter/actions)
-[![codecov](https://codecov.io/gh/TheLartians/ModernCppStarter/branch/master/graph/badge.svg)](https://codecov.io/gh/TheLartians/ModernCppStarter)
+[![Actions Status](https://github.com/cezuriku/bubblematch/workflows/MacOS/badge.svg)](https://github.com/cezuriku/bubblematch/actions)
+[![Actions Status](https://github.com/cezuriku/bubblematch/workflows/Windows/badge.svg)](https://github.com/cezuriku/bubblematch/actions)
+[![Actions Status](https://github.com/cezuriku/bubblematch/workflows/Ubuntu/badge.svg)](https://github.com/cezuriku/bubblematch/actions)
+[![Actions Status](https://github.com/cezuriku/bubblematch/workflows/Style/badge.svg)](https://github.com/cezuriku/bubblematch/actions)
+[![Actions Status](https://github.com/cezuriku/bubblematch/workflows/Install/badge.svg)](https://github.com/cezuriku/bubblematch/actions)
+[![codecov](https://codecov.io/gh/cezuriku/bubblematch/branch/master/graph/badge.svg)](https://codecov.io/gh/cezuriku/bubblematch)
 
 <p align="center">
   <img src="https://repository-images.githubusercontent.com/254842585/4dfa7580-7ffb-11ea-99d0-46b8fe2f4170" height="175" width="auto" />
 </p>
 
-# ModernCppStarter
+# BubbleMatch
 
 Setting up a new C++ project usually requires a significant amount of preparation and boilerplate code, even more so for modern C++ projects with tests, executables and continuous integration.
 This template is the result of learnings from many previous projects and should help reduce the work required to setup up a modern C++ project.
@@ -33,9 +33,9 @@ This template is the result of learnings from many previous projects and should 
 ### Adjust the template to your needs
 
 - Use this repo [as a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
-- Replace all occurrences of "Greeter" in the relevant CMakeLists.txt with the name of your project
-  - Capitalization matters here: `Greeter` means the name of the project, while `greeter` is used in file names.
-  - Remember to rename the `include/greeter` directory to use your project's lowercase name and update all relevant `#include`s accordingly.
+- Replace all occurrences of "BubbleMatch" in the relevant CMakeLists.txt with the name of your project
+  - Capitalization matters here: `BubbleMatch` means the name of the project, while `bubblematch` is used in file names.
+  - Remember to rename the `include/bubblematch` directory to use your project's lowercase name and update all relevant `#include`s accordingly.
 - Replace the source files with your own
 - For header-only libraries: see the comments in [CMakeLists.txt](CMakeLists.txt)
 - Add [your project's codecov token](https://docs.codecov.io/docs/quick-start) to your project's github secrets under `CODECOV_TOKEN`
@@ -54,7 +54,7 @@ Use the following command to build and run the executable target.
 ```bash
 cmake -S standalone -B build/standalone
 cmake --build build/standalone
-./build/standalone/Greeter --help
+./build/standalone/BubbleMatch --help
 ```
 
 ### Build and run test suite
@@ -67,7 +67,7 @@ cmake --build build/test
 CTEST_OUTPUT_ON_FAILURE=1 cmake --build build/test --target test
 
 # or simply call the executable: 
-./build/test/GreeterTests
+./build/test/BubbleMatchTests
 ```
 
 To collect code coverage information, run CMake with the `-DENABLE_TEST_COVERAGE=1` option.
@@ -91,7 +91,7 @@ See [Format.cmake](https://github.com/TheLartians/Format.cmake) for details.
 
 ### Build the documentation
 
-The documentation is automatically built and [published](https://thelartians.github.io/ModernCppStarter) whenever a [GitHub Release](https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository) is created.
+The documentation is automatically built and [published](https://thelartians.github.io/bubblematch) whenever a [GitHub Release](https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository) is created.
 To manually build documentation, call the following command.
 
 ```bash
@@ -113,11 +113,11 @@ cmake -S all -B build
 cmake --build build
 
 # run tests
-./build/test/GreeterTests
+./build/test/BubbleMatchTests
 # format code
 cmake --build build --target fix-format
 # run standalone
-./build/standalone/Greeter --help
+./build/standalone/BubbleMatch --help
 # build docs
 cmake --build build --target GenerateDocs
 ```
